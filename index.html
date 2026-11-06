@@ -82,6 +82,27 @@ header { background: #ffffff; border-bottom-color: #c8d8e6; }
 .mapwrap { background: #e6eadf; }
 /* Nur das Wasser in der SVG-Landschaft wird klar blau eingefärbt. */
 .water { fill: #a9d8ef; }
+
+/* Korrektur: Modulflächen grün statt schwarz */
+#moduleAreas path {
+  fill: #b5cf9f;
+  fill-opacity: 0.55;
+  stroke: #76966b;
+  stroke-width: 1.6;
+  stroke-dasharray: 5 4;
+}
+
+#moduleAreas path.selected {
+  fill: #a3c58f;
+  fill-opacity: 0.7;
+  stroke: #446d4a;
+  stroke-width: 2.6;
+}
+
+#moduleAreas path.faded {
+  opacity: 0.13;
+}
+
 </style>
 </head>
 <body>
