@@ -193,6 +193,9 @@ function drawGraph(){
  }
 }
 function setView(mode){viewMode=mode;const graph=mode==='graph';$('scene').style.display=graph?'none':'';$('graphScene').style.display=graph?'':'none';$('landView').classList.toggle('active',!graph);$('graphView').classList.toggle('active',graph);$('landView').setAttribute('aria-pressed',String(!graph));$('graphView').setAttribute('aria-pressed',String(graph));$('viewHint').textContent=graph?'Themen, Module und benannte Beziehungen · didaktisches Beispiel':'Modulregionen nach Credit Points';$('mapwrap').setAttribute('aria-label',graph?'Wissensgraph':'Lernlandschaft');}
-$('landView').onclick=()=>setView('land');$('graphView').onclick=()=>setView('graph');
+$('landView').onclick=()=>setView('land');$('graphView').onclick = () => {
+  drawGraph();
+  setView('graph');
+};
 render();
 </script></body></html>
